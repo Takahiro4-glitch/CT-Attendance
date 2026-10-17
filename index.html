@@ -1,34 +1,19 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="referrer" content="strict-origin-when-cross-origin">
-<title>ระบบเช็กชื่อนักเรียน โรงเรียนจอมทอง</title>
-<style>
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,sans-serif;background:#f1f5f9;color:#0f172a}header{background:#102b51;color:white;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}h1{font-size:17px;margin:0}a{color:inherit}header a{font-size:14px}iframe{display:block;border:0;width:100%;height:calc(100dvh - 70px);min-height:500px;background:white}.notice{max-width:680px;margin:60px auto;padding:28px;background:white;border-radius:16px;line-height:1.8}.notice h2{font-size:22px} [hidden]{display:none!important}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ระบบเช็กชื่อนักเรียน โรงเรียนจอมทอง</title>
+  <link rel="icon" type="image/png"
+        href="https://img2.pic.in.th/pic/LOGOChomthong0be381c1c5760248.png">
 </head>
-<body>
-<header><h1>ระบบเช็กชื่อนักเรียน · โรงเรียนจอมทอง</h1><a id="direct" hidden target="_blank" rel="noopener noreferrer">เปิดระบบในแท็บใหม่ ↗</a></header>
-<section class="notice" id="notice"><h2>ยังไม่ได้เชื่อมต่อระบบเช็กชื่อ</h2><p>ผู้ดูแลระบบ: ตรวจสอบ URL ของ Apps Script Web app ที่ลงท้ายด้วย /exec ในไฟล์ index.html แล้วเผยแพร่เว็บไซต์อีกครั้ง</p></section>
-<iframe id="attendance" title="ระบบเช็กชื่อนักเรียน" hidden></iframe>
-<script>window.ATTENDANCE_CONFIG = Object.freeze({webAppUrl: 'https://script.google.com/a/macros/crru.ac.th/s/AKfycbydi70yQM7cdJ7T4V2TNfQoKte2zVMxffFTzwoqgDsL3yBKxGp6vhCEiIfn4zKJWgQ0/exec'});</script>
-<script>
-'use strict';
-const raw = window.ATTENDANCE_CONFIG?.webAppUrl || '';
-let url;
-try { url = new URL(raw); } catch (_) {}
-if (url && url.protocol === 'https:' && url.hostname === 'script.google.com' && /^\/(?:a\/macros\/[A-Za-z0-9.-]+\/s|macros\/s)\/[A-Za-z0-9_-]+\/exec$/.test(url.pathname) && !url.search && !url.hash) {
-  document.getElementById('notice').hidden = true;
-  const frame = document.getElementById('attendance');
-  frame.src = url.href;
-  frame.hidden = false;
-  const direct = document.getElementById('direct');
-  direct.href = url.href;
-  direct.hidden = false;
-}
-</script>
+<body style="margin:0">
+  <object
+    type="text/html"
+    data="https://script.google.com/macros/s/AKfycbzCD20G6IgJ4zxgiRvlAZIJDzE9aAlK3l4MCXIMILI__qJyNPn2xwsSZGBqVpIvttyqmw/exec?embed=1"
+    aria-label="ระบบเช็กชื่อนักเรียน โรงเรียนจอมทอง"
+    style="position:fixed; inset:0; width:100%; height:100%; border:0;">
+    <p>หากระบบไม่แสดง <a href="https://script.google.com/macros/s/AKfycbzCD20G6IgJ4zxgiRvlAZIJDzE9aAlK3l4MCXIMILI__qJyNPn2xwsSZGBqVpIvttyqmw/exec?embed=1" target="_blank" rel="noopener noreferrer">เปิดระบบเช็กชื่อในแท็บใหม่</a></p>
+  </object>
 </body>
 </html>
-
